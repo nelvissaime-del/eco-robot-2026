@@ -1,0 +1,303 @@
+/* --- Variables de Paleta Dark Tech (Negro y Verde) --- */
+:root {
+    --bg-main: #0b0f17;             /* Negro profundo de fondo general */
+    --bg-card: #161b26;             /* Gris grafito oscuro para las tarjetas y paneles */
+    --primary-green: #00ff9d;       /* Verde menta/neón eléctrico de alto contraste */
+    --accent-light-green: #00df89;  /* Verde intermedio para degradados y pulso */
+    --primary-blue: #00b0ff;        /* Azul eléctrico para el toque de hardware */
+    --border-color: #242b3d;        /* Gris oscuro para bordes limpios en modo oscuro */
+    --text-main: #94a3b8;           /* Gris claro/plateado para lectura cómoda */
+    --text-bright: #ffffff;         /* Blanco puro para títulos y resaltar información */
+    --text-dim: #64748b;            /* Gris apagado para datos secundarios */
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    line-height: 1.6;
+    margin: 0; padding: 0;
+    background-color: var(--bg-main) !important; /* Fuerza el fondo negro profundo */
+    color: var(--text-main);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+/* --- Encabezado Oscuro --- */
+header {
+    background: radial-gradient(circle at top right, rgba(0, 255, 157, 0.05), transparent), var(--bg-card);
+    border-bottom: 1px solid var(--border-color);
+    padding: 4rem 1rem 3rem 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0; font-size: 3.5rem; font-weight: 800;
+    background: linear-gradient(135deg, var(--primary-green), var(--primary-blue));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tagline {
+    font-size: 1.15rem; color: var(--text-dim);
+    margin: 0.5rem 0 2rem 0;
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+}
+
+.pulse-dot {
+    width: 10px; height: 10px; background-color: var(--primary-green);
+    border-radius: 50%; box-shadow: 0 0 10px var(--primary-green);
+    animation: pulse 2s infinite;
+}
+@keyframes pulse {
+    0%, 100% { transform: scale(0.95); opacity: 0.6; box-shadow: 0 0 8px var(--primary-green); }
+    50% { transform: scale(1.2) ; opacity: 1; box-shadow: 0 0 16px var(--primary-green); }
+}
+
+.badge-nano {
+    background: rgba(0, 176, 255, 0.1); border: 1px solid var(--primary-blue);
+    color: var(--primary-blue); padding: 4px 12px; font-size: 0.75rem; font-weight: bold; border-radius: 4px;
+}
+
+.credits-panel {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem;
+    max-width: 800px; margin: 0 auto; background: var(--bg-main);
+    padding: 1rem; border-radius: 10px; border: 1px solid var(--border-color);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.credit-item { color: var(--text-main); }
+.credit-item strong { color: var(--text-bright); }
+.credit-item i { color: var(--primary-green); margin-right: 5px; }
+
+/* --- Panel de Introducción --- */
+.intro-box {
+    background: var(--bg-card); padding: 2.5rem; border-radius: 12px;
+    border: 1px solid var(--border-color); border-top: 4px solid var(--primary-green);
+    margin: -1.5rem auto 4rem auto; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.intro-badge { font-size: 0.75rem; color: var(--primary-green); font-weight: bold; margin-bottom: 0.5rem; letter-spacing: 1px; }
+.intro-box h2 { color: var(--text-bright); margin-top: 0; }
+.intro-box p { color: var(--text-main); }
+
+/* --- Títulos de Sección --- */
+.section-title { color: var(--text-bright); font-size: 1.7rem; margin-top: 4.5rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 12px; }
+.section-title i { color: var(--primary-green); }
+.section-subtitle { margin-bottom: 2rem; color: var(--text-dim); font-size: 1rem; }
+
+/* --- Grid de Arquitectura Interactiva --- */
+.grid-architecture { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 4rem; }
+
+.arch-card { 
+    background: var(--bg-card); padding: 2rem 1.5rem; border-radius: 12px; 
+    text-align: center; border: 1px solid var(--border-color); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.arch-card h3 { color: var(--text-bright); }
+.arch-card p { color: var(--text-main); }
+
+/* Hover: Eleva la tarjeta e ilumina el borde con el verde neón */
+.arch-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 255, 157, 0.08);
+    border-color: var(--primary-green);
+}
+
+.arch-icon { font-size: 2.5rem; margin-bottom: 1rem; transition: transform 0.3s ease; }
+.arch-card:hover .arch-icon { transform: scale(1.1); }
+
+.icon-brain { color: #ff5252; } 
+.icon-heart { color: var(--primary-green); } 
+.icon-power { color: #ffd740; }
+
+.card-tag { font-size: 0.75rem; background: var(--bg-main); padding: 3px 12px; border-radius: 12px; color: var(--text-main); margin-bottom: 0.8rem; font-weight: 500; border: 1px solid var(--border-color); }
+
+/* --- Línea de Tiempo Limpia --- */
+.timeline-clean {
+    background: var(--bg-card); border: 1px solid var(--border-color);
+    border-radius: 12px; padding: 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+.timeline-step { display: flex; gap: 20px; padding-bottom: 2rem; position: relative; }
+.timeline-step:not(:last-child)::after {
+    content: ''; position: absolute; top: 40px; left: 20px; bottom: 0; width: 2px; background-color: var(--border-color);
+}
+.step-number {
+    background: var(--bg-main); color: var(--primary-green); font-weight: bold; font-size: 1.1rem;
+    width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; border: 2px solid var(--border-color); transition: all 0.3s ease;
+}
+/* Efecto al pasar el cursor sobre la fila */
+.timeline-step:hover .step-number {
+    background: var(--primary-green); color: var(--bg-main); border-color: var(--primary-green);
+    box-shadow: 0 0 10px var(--primary-green);
+}
+.step-info h3 { margin: 0 0 0.5rem 0; font-size: 1.15rem; color: var(--text-bright); }
+.step-info p { margin: 0; color: var(--text-main); font-size: 0.95rem; }
+.step-info code { background: var(--bg-main); color: var(--primary-green); padding: 2px 6px; border-radius: 4px; font-family: monospace; }
+
+/* --- Portafolio de Imágenes en Modo Oscuro --- */
+.portfolio-gallery { display: flex; flex-direction: column; gap: 3.5rem; margin-top: 2rem; }
+.gallery-section h3 {
+    font-size: 1.2rem; color: var(--text-bright); border-bottom: 2px solid var(--border-color); padding-bottom: 8px; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 10px;
+}
+.gallery-section h3 i { color: var(--primary-blue); }
+
+/* Rejilla de Videos */
+.video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+.media-box {
+    background: #000; border-radius: 10px; overflow: hidden; position: relative; 
+    border: 1px solid var(--border-color); box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+.media-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.5);
+    border-color: var(--primary-blue);
+}
+.media-box video { width: 100%; display: block; max-height: 240px; object-fit: cover; }
+.media-label {
+    position: absolute; bottom: 0; left: 0; right: 0; background: rgba(22, 27, 38, 0.85); color: var(--text-bright); padding: 8px 12px; font-size: 0.8rem; text-align: center; backdrop-filter: blur(4px); border-top: 1px solid var(--border-color);
+}
+
+/* Rejillas de Fotos */
+.photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+.board-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+
+.photo-card {
+    background: var(--bg-card); border-radius: 8px; overflow: hidden; 
+    border: 1px solid var(--border-color); position: relative; 
+    aspect-ratio: 4 / 3; box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+/* Hover Fotos: Iluminación neón azulada en las fotos */
+.photo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 22px rgba(0, 176, 255, 0.15);
+    border-color: var(--primary-blue);
+}
+.photo-card img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; opacity: 0.85; /* Un poco opacas por defecto para encajar con el modo oscuro */ }
+.photo-card:hover img { transform: scale(1.06); opacity: 1; /* Ilumina al 100% al pasar el mouse */ }
+
+.photo-info {
+    position: absolute; bottom: 0; left: 0; right: 0; 
+    background: linear-gradient(transparent, rgba(11, 15, 23, 0.95)); color: #fff; 
+    padding: 30px 12px 12px 12px; opacity: 0; transition: opacity 0.3s ease;
+}
+.photo-card:hover .photo-info { opacity: 1; }
+.photo-info h4 { margin: 0; font-size: 0.9rem; font-weight: 600; color: var(--text-bright); }
+.photo-info p { margin: 2px 0 0 0; font-size: 0.75rem; color: var(--primary-green); /* Subtítulos de las fotos en verde neón */ }
+
+/* --- Tarjetas de Impacto --- */
+.grid-components { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+.card { 
+    background: var(--bg-card); padding: 2rem; border-radius: 12px; 
+    border: 1px solid var(--border-color); position: relative; overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+.card h3 { color: var(--text-bright); }
+.card p { color: var(--text-main); }
+.card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, var(--primary-green), var(--primary-blue)); }
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 255, 157, 0.08);
+    border-color: rgba(0, 255, 157, 0.2);
+}
+.card-icon-top { font-size: 1.8rem; color: var(--primary-green); margin-bottom: 0.5rem; transition: transform 0.3s ease; }
+.card:hover .card-icon-top { transform: rotate(10deg) scale(1.1); }
+
+/* --- Footer Oscuro --- */
+footer { text-align: center; padding: 3rem 1rem; margin-top: 5rem; border-top: 1px solid var(--border-color); background-color: var(--bg-card); color: var(--text-dim); font-size: 0.85rem; }
+
+/* --- Responsive --- */
+@media screen and (max-width: 900px) {
+    .photo-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media screen and (max-width: 600px) {
+    header h1 { font-size: 2.3rem; }
+    .photo-grid, .board-grid { grid-template-columns: 1fr; }
+    .photo-card { aspect-ratio: 16 / 9; }
+    .timeline-clean { padding: 1.2rem; }
+}
+/* --- Videos para la Sección de Desarrollo Teórico (Versión B: Dos Columnas Grandes) --- */
+/* --- Videos para la Sección de Desarrollo Teórico --- */
+/* --- Videos para la Sección de Desarrollo Teórico (Versión B Unificada) --- */
+/* --- Videos para la Sección de Desarrollo Teórico (Versión B Unificada) --- */
+.video-grid-theory {
+    display: grid;
+    /* Ajusta dinámicamente a dos columnas grandes en PC o una sola en pantallas pequeñas */
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); 
+    gap: 1.8rem;
+    margin: 1.5rem 0 2.5rem 0; /* Margen para separarse limpiamente de la foto inferior */
+    width: 100%;
+}
+
+.media-box-theory {
+    background: #000000;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative; 
+    border: 1px solid var(--border-color);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column; /* Alineación vertical perfecta del reproductor y el texto */
+}
+
+/* Efecto Hover: Elevación e iluminación verde neón en los bordes */
+.media-box-theory:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 255, 157, 0.18);
+    border-color: var(--primary-green);
+}
+
+.media-box-theory video {
+    width: 100%;
+    display: block;
+    height: 340px;          /* Mantiene la altura imponente que querías */
+    object-fit: contain;    /* Clave: Evita cortes en fórmulas, textos o simulaciones */
+    background-color: #000000;
+}
+
+.media-label-theory {
+    position: relative;     /* Cambiado a relativo para que se posicione ABAJO del video sin tapar controles */
+    background: var(--bg-card);
+    color: var(--text-bright);
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    text-align: left;
+    border-top: 1px solid var(--border-color);
+    font-weight: 500;
+}
+
+.media-label-theory i {
+    color: var(--primary-green);
+    margin-right: 8px;
+}
+
+/* --- Ajuste de Rejilla para la Pizarra Teórica --- */
+.board-grid {
+   display: flex;
+    justify-content: center; /* Centra la tarjeta de la foto horizontalmente */
+    margin-top: 2rem;
+    width: 100%;
+}
+.board-grid .photo-card {
+    width: 100%;
+    max-width: 550px;       /* Tamaño ideal para que combine con el ancho de los videos */
+    height: auto;           /* Permite que la altura se adapte a la imagen real */
+    aspect-ratio: 4 / 3;    /* Mantiene la hermosa proporción de pizarra escolar */
+}
+/* Ajuste de adaptabilidad para pantallas o laptops medianas */
+@media screen and (max-width: 950px) {
+    .video-grid-theory {
+        grid-template-columns: 1fr; /* Si el espacio se reduce, se apilan verticalmente sin romperse */
+    }
+}
