@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco-Robot | Olimpiadas de Robótica Creativa 2026</title>
+    <link rel="stylesheet" href="estilos.css">
+    <!-- Set de íconos moderno -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <span class="badge-nano">PROYECTO OFICIAL 2026</span>
+            <h1>Eco-Robot</h1>
+            <p class="tagline">El guardián tecnológico de tus plantas <span class="pulse-dot"></span></p>
+            
+            <div class="credits-panel">
+                <div class="credit-item"><i class="fa-solid fa-users"></i> <strong>Equipo:</strong> EcoTecnólogos</div>
+                <div class="credit-item"><i class="fa-solid fa-robot"></i> Abraham Garcia. • Yessiannys Torrealba. • Ian Álvarez.</div>
+                <div class="credit-item"><i class="fa-solid fa-chalkboard-user"></i> <strong>Tutor:</strong> Douglas Álvarez | Anaco</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <!-- INTRODUCCIÓN -->
+        <section class="intro-box">
+            <div class="intro-badge"><i class="fa-solid fa-circle-info"></i> VISIÓN GENERAL</div>
+            <h2>Agricultura de Precisión Urbana</h2>
+            <p>Eco-Robot is un prototipo robótico móvil diseñado para automatizar y optimizar el cuidado de cultivos en entornos urbanos. Mediante la fusión de hardware de control dinámico y sensores de análisis ambiental, gestiona el riego de forma milimétrica mediante una bomba hídrica integrada y un chasis con tracción autónoma.</p>
+        </section>
+
+        <!-- ARQUITECTURA -->
+        <h2 class="section-title"><i class="fa-solid fa-network-wired"></i> Arquitectura del Sistema</h2>
+        <p class="section-subtitle">Distribución estratégica de las etapas de control y potencia:</p>
+
+        <div class="grid-architecture">
+            <div class="arch-card">
+                <div class="arch-icon icon-brain"><i class="fa-solid fa-microchip"></i></div>
+                <h3>Arduino (El Cerebro)</h3>
+                <div class="card-tag">Procesamiento</div>
+                <p>Procesa los datos algorítmicos en tiempo real, interpretando las señales analógicas para ejecutar decisiones automatizadas.</p>
+            </div>
+            <div class="arch-card">
+                <div class="arch-icon icon-heart"><i class="fa-solid fa-wave-square"></i></div>
+                <h3>Protoboard (El Corazón)</h3>
+                <div class="card-tag">Distribución</div>
+                <p>Punto central de distribución de señales de control y buses de alimentación entre componentes.</p>
+            </div>
+            <div class="arch-card">
+                <div class="arch-icon icon-power"><i class="fa-solid fa-bolt"></i></div>
+                <h3>Driver L298N (La Energía)</h3>
+                <div class="card-tag">Potencia Dinámica</div>
+                <p>Etapa de potencia indispensable para modular el voltaje y suministrar el torque requerido por los motores.</p>
+            </div>
+        </div>
+
+        <!-- LÍNEA DE TIEMPO LIMPIA -->
+        <h2 class="section-title"><i class="fa-solid fa-timeline"></i> Registro de Avance Metodológico</h2>
+        <p class="section-subtitle">Evolución técnica del proyecto dividida por hitos de desarrollo:</p>
+        
+        <div class="timeline-clean">
+            <div class="timeline-step">
+                <div class="step-number">01</div>
+                <div class="step-info">
+                    <h3>Monitor Estático en Protoboard (Fase 1)</h3>
+                    <p>Desarrollo del primer núcleo de control en banco de pruebas. Calibración de variables críticas y filtrado de señales analógicas primarias.</p>
+                </div>
+            </div>
+            <div class="timeline-step">
+                <div class="step-number">02</div>
+                <div class="step-info">
+                    <h3>Análisis del Sensor LDR (Estudio Matemático)</h3>
+                    <p>Modelado matemático del circuito divisor de tensión para la fotorresistencia en pizarra, permitiendo al firmware interpretar transiciones lumínicas.</p>
+                </div>
+            </div>
+            <div class="timeline-step">
+                <div class="step-number">03</div>
+                <div class="step-info">
+                    <h3>Interfaz Gráfica OLED (Fase 3)</h3>
+                    <p>Programación de la interfaz visual en pantalla OLED (I2C) desplegando telemetría básica y strings dinámicos de estado del sistema (<code>^ _ ^ TODO BIEN</code>).</p>
+                </div>
+            </div>
+            <div class="timeline-step">
+                <div class="step-number">04</div>
+                <div class="step-info">
+                    <h3>Lógica de Control Condicional (Fase 4)</h3>
+                    <p>Estructuraciones del bucle cíclico (<code>void loop</code>) mediante máquinas de estado y condicionales anidados para las rutinas mecánicas.</p>
+                </div>
+            </div>
+            <div class="timeline-step">
+                <div class="step-number">05</div>
+                <div class="step-info">
+                    <h3>Estabilización y Energía Autónoma</h3>
+                    <p>Migración a una fuente de alimentación portátil desacoplada (Power Bank) para eliminar el ruido eléctrico de la red y validar la portabilidad en exteriores.</p>
+                </div>
+            </div>
+            <div class="timeline-step">
+                <div class="step-number">06</div>
+                <div class="step-info">
+                    <h3>Construcción Mecánica del Chasis Final</h3>
+                    <p>Corte, mecanizado e integración del chasis cilíndrico final, ensamble de la servotransmisión, motores de alto torque y calibración de bombeo.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- GALERÍA DE EVIDENCIAS Y MULTIMEDIA -->
+        <h2 class="section-title"><i class="fa-solid fa-images"></i> Galería de Evidencias y Multimedia</h2>
+        <p class="section-subtitle">Registros multimedia organizados por módulos de trabajo:</p>
+
+        <div class="portfolio-gallery">
+            
+            <!-- Bloque de Videos Generales -->
+            <div class="gallery-section">
+                <h3><i class="fa-solid fa-video"></i> Explicaciones en Video</h3>
+                <div class="video-grid">
+                    <div class="media-box">
+                        <video src="WhatsApp Video 2026-05-18 at 6.54.21 PM.mp4" controls></video>
+                        <span class="media-label">Estructura & Control</span>
+                    </div>
+                    <div class="media-box">
+                        <video src="WhatsApp Video 2026-05-18 at 6.52.00 PM.mp4" controls></video>
+                        <span class="media-label">Rutinas de Automatización</span>
+                    </div>
+                    <div class="media-box">
+                        <video src="WhatsApp Video 2026-05-18 at 6.54.24 PM.mp4" controls></video>
+                        <span class="media-label">Material de chasis</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bloque de Fotos Generales -->
+            <div class="gallery-section">
+                <h3><i class="fa-solid fa-camera"></i> Inspección de Hardware</h3>
+                <div class="photo-grid">
+                    <div class="photo-card">
+                        <img src="1.jpeg" alt="Montaje inicial">
+                        <div class="photo-info"><h4>Prototipo Inicial</h4><p>Montaje primario</p></div>
+                    </div>
+                    <div class="photo-card">
+                        <img src="pines.jpeg" alt="Estructura del circuito">
+                        <div class="photo-info"><h4>Distribución de Buses</h4><p>Cableado de control</p></div>
+                    </div>
+                    <div class="photo-card">
+                        <img src="pantalla.jpeg" alt="Pantalla OLED">
+                        <div class="photo-info"><h4>Display OLED</h4><p>Telemetría en tiempo real</p></div>
+                    </div>
+                    <div class="photo-card">
+                        <img src="Alimentacion.jpeg" alt="Circuito autónomo">
+                        <div class="photo-info"><h4>Alimentación Portátil</h4><p>Test de desacoplamiento</p></div>
+                    </div>
+                    <div class="photo-card">
+                        <img src="Despiece.jpeg" alt="Componentes chasis">
+                        <div class="photo-info"><h4>Despiece Mecánico</h4><p>Estructura del Chasis</p></div>
+                    </div>
+                    <div class="photo-card">
+                        <img src="robo.jpeg" alt="Estructura cilíndrica">
+                        <div class="photo-info"><h4>Cuerpo Cilíndrico</h4><p>Ensamble estructural</p></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bloque de Análisis en Pizarra y Demostraciones Avanzadas -->
+            <div class="gallery-section">
+                <h3><i class="fa-solid fa-chalkboard"></i> Desarrollo Teórico y Demostraciones del Prototipo</h3>
+                
+                <!-- Videos Teóricos en Paralelo -->
+                <div class="video-grid-theory">
+                    <div class="media-box-theory">
+                        <video controls>
+                            <source src="Izquierdo.mp4" type="video/mp4">
+                            Tu navegador no soporta videos integrados.
+                        </video>
+                        <div class="media-label-theory">
+                            <i class="fas fa-calculator"></i> Explicación de Fórmulas y Simulación
+                        </div>
+                    </div>
+
+                    <div class="media-box-theory">
+                        <video controls>
+                            <source src="Central.mp4" type="video/mp4">
+                            Tu navegador no soporta videos integrados.
+                        </video>
+                        <div class="media-label-theory">
+                            <i class="fas fa-microchip"></i> Comprobación Teórica del Algoritmo
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Imagen de la Pizarra Centrada Abajo -->
+                <div class="board-grid">
+                    <div class="photo-card">
+                        <img src="Control.jpeg" alt="PIZARRA">
+                        <div class="photo-info">
+                            <h4>Cálculos y Ajustes Estructura de Control</h4>
+                            <p>Calibración analógica y modelado matemático</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- Fin de portfolio-gallery -->
+
+        <!-- IMPACTO -->
+        <h2 class="section-title"><i class="fa-solid fa-earth-americas"></i> Impacto Social y Ambiental</h2>
+        <div class="grid-components">
+            <div class="card">
+                <div class="card-icon-top"><i class="fa-solid fa-droplet"></i></div>
+                <h3>Ahorro Hídrico Optimizado</h3>
+                <p>Riego de precisión basado puramente en curvas de humedad real del sustrato, mitigando el desperdicio del recurso en un 40% frente a sistemas temporizados tradicionales.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon-top"><i class="fa-solid fa-seedling"></i></div>
+                <h3>Seguridad Alimentaria Urbana</h3>
+                <p>Ecosistema escalable para micro-cultivos automatizados en zonas urbanas densas, reduciendo la huella de carbono logística de transporte de alimentos.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 EcoTecnólogos - Innovación para el Desarrollo Sustentable</p>
+    </footer>
+
+</body>
+</html>
